@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <title>Loan Calculator</title>
+</head>
+
+<body class="bg-dark">
+    <setion>
+        <div class="container">
+            <div class="row">
+                <div class="card col-6 mx-auto bg-success text-white text-center">
+                    <div class="card-header bg-secondary">
+                        <h3 class="heading display-5">Loan Calculator</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-danger error alert-dismissible fade show" role="alert">
+                            <strong>PLease check your Numbers</strong> 
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <form id="loan-form">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">$</span>
+                                </div>
+                                <input type="text" class="form-control" id="loan" placeholder="Loan Amount" required>
+                            </div>
+                            <div class="input-group mt-2">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon2">%</span>
+                                </div>
+                                <input type="text" class="form-control" id="interest" placeholder="Interest" required>
+                            </div>
+                            <div class="form-group mt-2">
+                                <input class="form-control" type="number" name="years" id="years" placeholder="Years to Repay" required>
+                            </div>
+                            <div class="form-group mt-2">
+                                <input class="form-control btn btn-outline-warning font-weight-bold btn-block" type="submit" value="Calculate">
+                            </div>
+                        </form>
+                        <!-- loader -->
+                        <div class="loader">
+                            <img src="loading.gif" alt="" class="img-fluid">
+                        </div>
+
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Results</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Monthly Payments</td>
+                                    <td id="monthly-pay"></td>
+                                </tr>
+                                <tr>
+                                    <td>Total Payments</td>
+                                    <td id="total-pay"></td>
+                                </tr>
+                                <tr>
+                                    <td>Total Interest</td>
+                                    <td id="total-interest"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </setion>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
